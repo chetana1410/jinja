@@ -161,6 +161,8 @@ def do_urlencode(
     ``|replace("/", "%2F")`` filter.
 
     .. versionadded:: 2.7
+    .. versionchanged:: 3.2
+        Any mapping is encoded as a query string, not only ``dict``.
     """
     if isinstance(value, str) or not isinstance(value, abc.Iterable):
         return url_quote(value)
